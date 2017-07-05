@@ -115,11 +115,12 @@
 		$('#kfcl').hide();
 	})
 	$('button').on('click',function(){
-		if ($("value") == "true") {
-			alert("Thank You for ordering :)");
+		if (!$('input[type=checkbox]:checked').length) {
+			alert("You do not select anything :(");
+
 		}
-		else{
-			alert("You do not select anything :(")
+		else {
+			alert("Thank You for ordering :)");
 		}
 	})
 </script>
