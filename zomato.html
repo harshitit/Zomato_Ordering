@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+	<style>
+		body{
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			font-family: "Arial";
+		}
+		header{
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			background: #CC0000;
+			color: white;
+			font-size: 30px;
+		}
+		.restaurant-list{
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+		}
+		.restaurant-list h1{
+			font-size: 25px;
+		}
+		.restaurant-list div{
+			display: inline-block;
+			position: relative;
+
+			padding: 50px 0px;
+			width: 24%;
+		}
+		ul{
+			text-align: left;
+			list-style-type: none;
+		}
+	</style>
+</head>
 <body>
 <header>
 	<h1>zomato ordering</h1>
 </header>
 <div class="restaurant-list">
-	<h1>Restaurants:</h1>
+	<h1><u>Restaurants:</u></h1>
 	<div id="restaurant1">
+		<img src="KFC.jpg" width="100%">
 		<h1 id="kfc">KFC</h1>
 		<ul id="kfcl">
-			<li>grilled chicken bucket <input type="checkbox"></li>
-			<li>zinger burger <input type="checkbox"></li>
-			<li>rock box <input type="checkbox"></li>
+			<li><input type="checkbox" id="True">grilled chicken bucket</li>
+			<li><input type="checkbox" id="True">zinger burger</li>
+			<li><input type="checkbox" id="True">rock box</li><br>
 			<button id="kfcb">Done</button>
 		</ul>
 	</div>
 	<div id="restaurant2">
+		<img src="mcdonalds.jpg" width="100%">
 		<h1 id="mcdonald">McDonald's</h1>
 		<ul id="mcdonaldl">
-			<li>McPaneer <input type="checkbox"></li>
-			<li>Maharaja Mac <input type="checkbox"></li>
-			<li>McChicken</li>
-			<button id="mcdonaldb">Done</button>
+			<li><input type="checkbox" value="True">McPaneer</li>
+			<li><input type="checkbox" value="True">Maharaja Mac</li>
+			<li><input type="checkbox" value="True">McChicken</li>
+			<button id="mcdonaldb" value="True">Done</button><br>
 		</ul>
 	</div>
 	<div id="restaurant3">
+		<img src="dominos.jpg" width="75%">
 		<h1 id="dominos">Dominos's Pizza</h1>
 		<ul id="dominosl">
-			<li>Farmhouse <input type="checkbox"></li>
-			<li>5 Pepper <input type="checkbox"></li>
-			<li>Country Special <input type="checkbox"></li>
-			<button id="dominosb">Done</button>
+			<li><input type="checkbox" value="True">Farmhouse</li>
+			<li><input type="checkbox" value="True">5 Pepper</li>
+			<li><input type="checkbox" value="True">Country Special</li>
+			<button id="dominosb">Done</button><br>
 		</ul>
 	</div>
 	<div id="restaurant4">
+		<img src="khanchacha.jpg" width="75%">
 		<h1 id="khan">Khan Chacha</h1>
 		<ul id="khanl">
-			<li>Chicken Biryani <input type="checkbox"></li>
-			<li>Chicken Afgani <input type="checkbox"></li>
-			<li>Chicken Butter <input type="checkbox"></li>
-			<button id="khanb">Done</button>
+			<li><input type="checkbox" value="True">Chicken Biryani</li>
+			<li><input type="checkbox" value="True">Chicken Afgani</li>
+			<li><input type="checkbox" value="True">Chicken Butter</li>
+			<button id="khanb">Done</button><br>
 		</ul>
 	</div>
 </div>
 <script src="jquery-2.2.0.js"></script>
 <script type="text/javascript">
+	$('#kfcl').hide();
+	$('#mcdonaldl').hide();
+	$('#dominosl').hide();
+	$('#khanl').hide();
 	$('#kfc').on('click',function(){
 		$('#kfcl').toggle();
 		$('#mcdonaldl').hide();
@@ -69,6 +113,14 @@
 		$('#mcdonaldl').hide();
 		$('#dominosl').hide();
 		$('#kfcl').hide();
+	})
+	$('button').on('click',function(){
+		if ($("value") == "true") {
+			alert("Thank You for ordering :)");
+		}
+		else{
+			alert("You do not select anything :(")
+		}
 	})
 </script>
 </body>
