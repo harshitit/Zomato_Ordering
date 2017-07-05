@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<header>
+	<h1>zomato ordering</h1>
+</header>
+<div class="restaurant-list">
+	<h1>Restaurants:</h1>
+	<div id="restaurant1">
+		<h1 id="kfc">KFC</h1>
+		<ul id="kfcl">
+			<li>grilled chicken bucket <input type="checkbox"></li>
+			<li>zinger burger <input type="checkbox"></li>
+			<li>rock box <input type="checkbox"></li>
+			<button id="kfcb">Done</button>
+		</ul>
+	</div>
+	<div id="restaurant2">
+		<h1 id="mcdonald">McDonald's</h1>
+		<ul id="mcdonaldl">
+			<li>McPaneer <input type="checkbox"></li>
+			<li>Maharaja Mac <input type="checkbox"></li>
+			<li>McChicken</li>
+			<button id="mcdonaldb">Done</button>
+		</ul>
+	</div>
+	<div id="restaurant3">
+		<h1 id="dominos">Dominos's Pizza</h1>
+		<ul id="dominosl">
+			<li>Farmhouse <input type="checkbox"></li>
+			<li>5 Pepper <input type="checkbox"></li>
+			<li>Country Special <input type="checkbox"></li>
+			<button id="dominosb">Done</button>
+		</ul>
+	</div>
+	<div id="restaurant4">
+		<h1 id="khan">Khan Chacha</h1>
+		<ul id="khanl">
+			<li>Chicken Biryani <input type="checkbox"></li>
+			<li>Chicken Afgani <input type="checkbox"></li>
+			<li>Chicken Butter <input type="checkbox"></li>
+			<button id="khanb">Done</button>
+		</ul>
+	</div>
+</div>
+<script src="jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	$('#kfc').on('click',function(){
+		$('#kfcl').toggle();
+		$('#mcdonaldl').hide();
+		$('#dominosl').hide();
+		$('#khanl').hide();
+	})
+	$('#mcdonald').on('click',function(){
+		$('#mcdonaldl').toggle();
+		$('#kfcl').hide();
+		$('#dominosl').hide();
+		$('#khanl').hide();
+	})
+	$('#dominos').on('click',function(){
+		$('#dominosl').toggle();
+		$('#mcdonaldl').hide();
+		$('#kfcl').hide();
+		$('#khanl').hide();
+	})
+	$('#khan').on('click',function(){
+		$('#khanl').toggle();
+		$('#mcdonaldl').hide();
+		$('#dominosl').hide();
+		$('#kfcl').hide();
+	})
+</script>
+</body>
+</html>
