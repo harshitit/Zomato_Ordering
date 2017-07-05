@@ -27,7 +27,6 @@
 		.restaurant-list div{
 			display: inline-block;
 			position: relative;
-
 			padding: 50px 0px;
 			width: 24%;
 		}
@@ -47,9 +46,9 @@
 		<img src="KFC.jpg" width="100%">
 		<h1 id="kfc">KFC</h1>
 		<ul id="kfcl">
-			<li><input type="checkbox" id="True">grilled chicken bucket</li>
-			<li><input type="checkbox" id="True">zinger burger</li>
-			<li><input type="checkbox" id="True">rock box</li><br>
+			<li><input type="checkbox">grilled chicken bucket</li>
+			<li><input type="checkbox">zinger burger</li>
+			<li><input type="checkbox">rock box</li><br>
 			<button id="kfcb">Done</button>
 		</ul>
 	</div>
@@ -57,30 +56,30 @@
 		<img src="mcdonalds.jpg" width="100%">
 		<h1 id="mcdonald">McDonald's</h1>
 		<ul id="mcdonaldl">
-			<li><input type="checkbox" value="True">McPaneer</li>
-			<li><input type="checkbox" value="True">Maharaja Mac</li>
-			<li><input type="checkbox" value="True">McChicken</li>
-			<button id="mcdonaldb" value="True">Done</button><br>
+			<li><input type="checkbox">McPaneer</li>
+			<li><input type="checkbox">Maharaja Mac</li>
+			<li><input type="checkbox">McChicken</li><br>
+			<button id="mcdonaldb">Done</button>
 		</ul>
 	</div>
 	<div id="restaurant3">
 		<img src="dominos.jpg" width="75%">
 		<h1 id="dominos">Dominos's Pizza</h1>
 		<ul id="dominosl">
-			<li><input type="checkbox" value="True">Farmhouse</li>
-			<li><input type="checkbox" value="True">5 Pepper</li>
-			<li><input type="checkbox" value="True">Country Special</li>
-			<button id="dominosb">Done</button><br>
+			<li><input type="checkbox">Farmhouse</li>
+			<li><input type="checkbox">5 Pepper</li>
+			<li><input type="checkbox">Country Special</li><br>
+			<button id="dominosb">Done</button>
 		</ul>
 	</div>
 	<div id="restaurant4">
 		<img src="khanchacha.jpg" width="75%">
 		<h1 id="khan">Khan Chacha</h1>
 		<ul id="khanl">
-			<li><input type="checkbox" value="True">Chicken Biryani</li>
-			<li><input type="checkbox" value="True">Chicken Afgani</li>
-			<li><input type="checkbox" value="True">Chicken Butter</li>
-			<button id="khanb">Done</button><br>
+			<li><input type="checkbox">Chicken Biryani</li>
+			<li><input type="checkbox">Chicken Afgani</li>
+			<li><input type="checkbox">Chicken Butter</li><br>
+			<button id="khanb">Done</button>
 		</ul>
 	</div>
 </div>
@@ -121,6 +120,7 @@
 		}
 		else {
 			alert("Thank You for ordering :)");
+			$('input[type=checkbox]').set('unchecked');
 		}
 	})
 </script>
